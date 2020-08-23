@@ -38,28 +38,28 @@ class MainActivity : AppCompatActivity() {
         if (numberOptions == 2) {
             if (optionA == "" || optionB == "") {
                 //toast that says both should be filled
-                Toast.makeText(this@MainActivity, "You need at least 2 options", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Fill in at least 2 options", Toast.LENGTH_SHORT).show()
             }else{
                 getAnswer()
             }
         } else if (numberOptions == 3) {
             if (optionA == "" || optionB == "" || optionC == "") {
                 //toast that says both should be filled
-                Toast.makeText(this@MainActivity, "You need at least 2 options", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Fill in at least 3 options", Toast.LENGTH_SHORT).show()
             }else{
                 getAnswer()
             }
         } else if (numberOptions == 4) {
             if (optionA == "" || optionB == "" || optionC == "" || optionD == "") {
                 //toast that says both should be filled
-                Toast.makeText(this@MainActivity, "You need at least 2 options", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Fill in at least 4 options", Toast.LENGTH_SHORT).show()
             }else{
                 getAnswer()
             }
         } else if (numberOptions == 5) {
             if (optionA == "" || optionB == "" || optionC == "" || optionD == "" || optionE == "") {
                 //toast that says both should be filled
-                Toast.makeText(this@MainActivity, "You need at least 2 options", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "You need at least 5 options", Toast.LENGTH_SHORT).show()
             }else{
                 getAnswer()
             }
@@ -68,8 +68,8 @@ class MainActivity : AppCompatActivity() {
 
     fun addMoreOptions(view : View) {
         val option3 = findViewById<EditText>(R.id.option3)
-        val option4 = findViewById<EditText>(R.id.option3)
-        val option5 = findViewById<EditText>(R.id.option3)
+        val option4 = findViewById<EditText>(R.id.option4)
+        val option5 = findViewById<EditText>(R.id.option5)
         val addButton = findViewById<Button>(R.id.more_options_button)
         val removeButton = findViewById<Button>(R.id.less_options_button)
 
@@ -89,8 +89,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun removeOptions(view: View) {
         val option3 = findViewById<EditText>(R.id.option3)
-        val option4 = findViewById<EditText>(R.id.option3)
-        val option5 = findViewById<EditText>(R.id.option3)
+        val option4 = findViewById<EditText>(R.id.option4)
+        val option5 = findViewById<EditText>(R.id.option5)
         val addButton = findViewById<Button>(R.id.more_options_button)
         val removeButton = findViewById<Button>(R.id.less_options_button)
 
