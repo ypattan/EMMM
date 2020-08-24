@@ -45,21 +45,21 @@ class MainActivity : AppCompatActivity() {
         } else if (numberOptions == 3) {
             if (optionA == "" || optionB == "" || optionC == "") {
                 //toast that says both should be filled
-                Toast.makeText(this@MainActivity, "Fill in at least 3 options", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Fill in all 3 options", Toast.LENGTH_SHORT).show()
             }else{
                 getAnswer()
             }
         } else if (numberOptions == 4) {
             if (optionA == "" || optionB == "" || optionC == "" || optionD == "") {
                 //toast that says both should be filled
-                Toast.makeText(this@MainActivity, "Fill in at least 4 options", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "Fill in all 4 options", Toast.LENGTH_SHORT).show()
             }else{
                 getAnswer()
             }
         } else if (numberOptions == 5) {
             if (optionA == "" || optionB == "" || optionC == "" || optionD == "" || optionE == "") {
                 //toast that says both should be filled
-                Toast.makeText(this@MainActivity, "You need at least 5 options", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, "You need all 5 options", Toast.LENGTH_SHORT).show()
             }else{
                 getAnswer()
             }
@@ -109,22 +109,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getAnswer() {
-        val optionA= findViewById<EditText>(R.id.option1).text.toString()
-        val optionB= findViewById<EditText>(R.id.option1).text.toString()
 
         val intent = Intent(this, AnswerActivity::class.java)
 
         val rand = (0..numberOptions).random()
         if(rand == 1) {
             intent.putExtra("Answer", findViewById<EditText>(R.id.option1).text.toString())
+//            intent.putExtra("Answer", numberOptions.toString())
         } else if (rand == 2) {
             intent.putExtra("Answer", findViewById<EditText>(R.id.option2).text.toString())
+//            intent.putExtra("Answer", numberOptions.toString())
         } else if (rand == 3) {
             intent.putExtra("Answer", findViewById<EditText>(R.id.option3).text.toString())
+//            intent.putExtra("Answer", numberOptions.toString())
         } else if (rand == 4) {
         intent.putExtra("Answer", findViewById<EditText>(R.id.option4).text.toString())
+//            intent.putExtra("Answer", numberOptions.toString())
         } else if (rand == 5) {
             intent.putExtra("Answer", findViewById<EditText>(R.id.option5).text.toString())
+//            intent.putExtra("Answer", numberOptions.toString())
         }
 
         startActivity(intent)
