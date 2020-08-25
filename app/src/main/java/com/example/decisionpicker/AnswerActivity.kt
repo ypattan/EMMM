@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 
+
 class AnswerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,6 +16,7 @@ class AnswerActivity : AppCompatActivity() {
         findViewById<Button>(R.id.again_button).setOnClickListener{
             goTryAgain()
         }
+
     }
 
     private fun setAnswer() {
@@ -29,4 +31,5 @@ class AnswerActivity : AppCompatActivity() {
         startActivity(intent)
         this.finish()
     }
+
 }

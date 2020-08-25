@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="16dp"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/lightAccentColor">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
@@ -76,20 +78,27 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp">
             <Button
                 android:id="@+id/more_options_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="8dp"
                 android:visibility="visible"
+                android:background="@color/primaryColor"
+                android:textColor="@color/lightColor"
                 android:text="+ Add"/>
             <Button
                 android:id="@+id/less_options_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:visibility="gone"
+                android:layout_marginStart="8dp"
+                android:visibility="invisible"
+                android:background="@color/primaryColor"
+                android:textColor="@color/lightColor"
                 android:text="- Remove"/>
         </LinearLayout>
         <Button
@@ -98,6 +107,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="Enter"
+            android:textColor="@color/lightColor"
+            android:background="@color/primaryDarkColor"
             android:textSize="20dp" />
 
     </LinearLayout>
