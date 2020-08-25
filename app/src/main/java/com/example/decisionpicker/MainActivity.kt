@@ -79,14 +79,17 @@ class MainActivity : AppCompatActivity() {
 
         if(option3.visibility == View.GONE){
             option3.visibility = View.VISIBLE
+            option3.requestFocus()
             removeButton.visibility = View.VISIBLE
             numberOptions = 3
         } else if (option4.visibility == View.GONE){
             option4.visibility = View.VISIBLE
+            option4.requestFocus()
             numberOptions = 4
         } else{
             option5.visibility = View.VISIBLE
-            addButton.visibility = View.INVISIBLE
+            option5.requestFocus()
+            addButton.visibility = View.GONE
             numberOptions = 5
         }
     }
@@ -100,14 +103,17 @@ class MainActivity : AppCompatActivity() {
 
         if(option5.visibility == View.VISIBLE){
             option5.visibility = View.GONE
+            option5.text = null
             numberOptions = 4
         } else if (option4.visibility == View.VISIBLE){
             option4.visibility = View.GONE
+            option4.text = null
             numberOptions = 3
         } else{
             option3.visibility = View.GONE
+            option3.text = null
             numberOptions = 2
-            removeButton.visibility = View.INVISIBLE
+            removeButton.visibility = View.GONE
         }
         addButton.visibility = View.VISIBLE
     }
