@@ -10,7 +10,6 @@ class AnswerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_answer)
-
         setAnswer()
 
         findViewById<Button>(R.id.again_button).setOnClickListener{
@@ -25,6 +24,9 @@ class AnswerActivity : AppCompatActivity() {
 
     private fun goTryAgain() {
         val intent = Intent(this, MainActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
+        this.finish()
     }
 }
