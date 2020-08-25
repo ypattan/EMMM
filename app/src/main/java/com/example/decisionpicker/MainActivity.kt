@@ -3,6 +3,7 @@ package com.example.decisionpicker
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -11,6 +12,7 @@ import androidx.core.view.isGone
 
 class MainActivity : AppCompatActivity() {
     var numberOptions = 2
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_option_input)
@@ -34,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         val optionC= findViewById<EditText>(R.id.option3).text.toString()
         val optionD= findViewById<EditText>(R.id.option4).text.toString()
         val optionE= findViewById<EditText>(R.id.option5).text.toString()
+
+//        Log.d("BlankTest", "checking options - current # of open options: " + numberOptions)
 
         if (numberOptions == 2) {
             if (optionA == "" || optionB == "") {
@@ -112,21 +116,26 @@ class MainActivity : AppCompatActivity() {
 
         val intent = Intent(this, AnswerActivity::class.java)
 
-        val rand = (0..numberOptions).random()
+        val rand = (1..numberOptions).random()
         if(rand == 1) {
             intent.putExtra("Answer", findViewById<EditText>(R.id.option1).text.toString())
+//            Log.d("BlankTest", "Chosen Answer " + rand + ": " + findViewById<EditText>(R.id.option1).text.toString())
 //            intent.putExtra("Answer", numberOptions.toString())
         } else if (rand == 2) {
             intent.putExtra("Answer", findViewById<EditText>(R.id.option2).text.toString())
+//            Log.d("BlankTest", "Chosen Answer " + rand + ": " + findViewById<EditText>(R.id.option2).text.toString())
 //            intent.putExtra("Answer", numberOptions.toString())
         } else if (rand == 3) {
             intent.putExtra("Answer", findViewById<EditText>(R.id.option3).text.toString())
+//            Log.d("BlankTest", "Chosen Answer " + rand + ": " + findViewById<EditText>(R.id.option3).text.toString())
 //            intent.putExtra("Answer", numberOptions.toString())
         } else if (rand == 4) {
         intent.putExtra("Answer", findViewById<EditText>(R.id.option4).text.toString())
+//            Log.d("BlankTest", "Chosen Answer " + rand + ": " + findViewById<EditText>(R.id.option4).text.toString())
 //            intent.putExtra("Answer", numberOptions.toString())
         } else if (rand == 5) {
             intent.putExtra("Answer", findViewById<EditText>(R.id.option5).text.toString())
+//            Log.d("BlankTest", "Chosen Answer " + rand + ": " + findViewById<EditText>(R.id.option5).text.toString())
 //            intent.putExtra("Answer", numberOptions.toString())
         }
 
