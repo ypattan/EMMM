@@ -15,12 +15,23 @@
         android:layout_alignParentTop="true"
         android:orientation="vertical">
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/intro"
+            android:textSize="18dp" />
+
         <EditText
             android:id="@+id/option1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
             android:hint="Enter option 1"/>
 
         <EditText
@@ -29,6 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
             android:hint="Enter option 2"/>
 
         <EditText
@@ -37,6 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
             android:visibility="gone"
             android:hint="Enter option 3"/>
 
@@ -46,6 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
             android:visibility="gone"
             android:hint="Enter option 4"/>
 
@@ -55,6 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
             android:visibility="gone"
             android:hint="Enter option 5"/>
 
@@ -74,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:visibility="gone"
+                android:visibility="invisible"
                 android:text="- Remove"/>
         </LinearLayout>
         <Button
@@ -86,8 +101,5 @@
             android:textSize="20dp" />
 
     </LinearLayout>
-
-
-
 </RelativeLayout>
 

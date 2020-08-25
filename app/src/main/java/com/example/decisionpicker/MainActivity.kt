@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
             numberOptions = 4
         } else{
             option5.visibility = View.VISIBLE
-            addButton.visibility = View.GONE
+            addButton.visibility = View.INVISIBLE
             numberOptions = 5
         }
     }
@@ -103,7 +103,7 @@ class MainActivity : AppCompatActivity() {
         } else{
             option3.visibility = View.GONE
             numberOptions = 2
-            removeButton.visibility = View.GONE
+            removeButton.visibility = View.INVISIBLE
         }
         addButton.visibility = View.VISIBLE
     }
