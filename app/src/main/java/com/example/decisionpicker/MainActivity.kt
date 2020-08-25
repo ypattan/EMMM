@@ -91,7 +91,7 @@ class MainActivity : AppCompatActivity() {
         } else{
             option5.visibility = View.VISIBLE
             option5.requestFocus()
-            addButton.visibility = View.GONE
+            addButton.visibility = View.INVISIBLE
             numberOptions = 5
         }
     }
@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
             option3.visibility = View.GONE
             option3.text = null
             numberOptions = 2
-            removeButton.visibility = View.GONE
+            removeButton.visibility = View.INVISIBLE
         }
         addButton.visibility = View.VISIBLE
     }
