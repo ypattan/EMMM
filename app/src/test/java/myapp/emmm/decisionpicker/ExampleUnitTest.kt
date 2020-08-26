@@ -1,4 +1,4 @@
-package com.example.decisionpicker
+package myapp.emmm.decisionpicker
 
 import org.junit.Test
 

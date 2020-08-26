@@ -1,4 +1,4 @@
-package com.example.decisionpicker
+package myapp.emmm.decisionpicker
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_emmm_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AnswerActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="myapp.emmm.decisionpicker.AnswerActivity"></activity>
+        <activity android:name="myapp.emmm.decisionpicker.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
